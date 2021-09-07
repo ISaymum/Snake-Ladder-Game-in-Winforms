@@ -88,7 +88,7 @@ namespace Snake_Ladder_Game
             if (flag==0)
             {
                 bRoll2.Enabled = false;
-                lJoueur.Text = "Joueur vert";
+                lJoueur.Text = "Green Pawn";
             }
             pbPawn2B.Visible = false;
             pbPawn1B.Visible = false;
