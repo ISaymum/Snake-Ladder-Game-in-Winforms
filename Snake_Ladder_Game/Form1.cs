@@ -127,7 +127,7 @@ namespace Snake_Ladder_Game
 
             if (p>=100)
             {
-                MessageBox.Show("Victoire du joueur Vert !");
+                MessageBox.Show("Victory of green pawn");
                 bCharger.Enabled = false;
                 bSauvegarder.Enabled = false;
                 bRoll.Enabled = false;
@@ -145,7 +145,7 @@ namespace Snake_Ladder_Game
                 flag = 1;
                 bRoll2.Enabled = true;
                 bRoll.Enabled = false;
-                lJoueur.Text = "Joueur rouge";
+                lJoueur.Text = "Red Pawn";
             }
 
 
@@ -176,7 +176,7 @@ namespace Snake_Ladder_Game
             }
             if (q >= 100)
             {
-                MessageBox.Show("Victoire du joueur Rouge!");
+                MessageBox.Show("Victory of red pawn !");
                 bRoll2.Enabled = false;
                 bCharger.Enabled = false;
                 bSauvegarder.Enabled = false;
@@ -195,7 +195,7 @@ namespace Snake_Ladder_Game
                 flag = 1;
                 bRoll2.Enabled = false;
                 bRoll.Enabled = true;
-                lJoueur.Text = "Joueur vert";
+                lJoueur.Text = "Green Pawn";
             }
         }
         private void bTriche_Click(object sender, EventArgs e)

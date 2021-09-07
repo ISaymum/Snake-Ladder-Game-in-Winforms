@@ -30,6 +30,7 @@ namespace Snake_Ladder_Game
         private void InitializeComponent()
         {
             this.pMenu = new System.Windows.Forms.Panel();
+            this.bTriche = new System.Windows.Forms.Button();
             this.bSauvegarder = new System.Windows.Forms.Button();
             this.bCharger = new System.Windows.Forms.Button();
             this.lJoueur = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace Snake_Ladder_Game
             this.pBoard = new System.Windows.Forms.Panel();
             this.pbPawn2B = new System.Windows.Forms.PictureBox();
             this.pbPawn1B = new System.Windows.Forms.PictureBox();
-            this.bTriche = new System.Windows.Forms.Button();
             this.bRestart = new System.Windows.Forms.Button();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDice)).BeginInit();
@@ -91,6 +91,19 @@ namespace Snake_Ladder_Game
             this.pMenu.Size = new System.Drawing.Size(190, 500);
             this.pMenu.TabIndex = 1;
             // 
+            // bTriche
+            // 
+            this.bTriche.BackColor = System.Drawing.Color.Black;
+            this.bTriche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bTriche.ForeColor = System.Drawing.Color.White;
+            this.bTriche.Location = new System.Drawing.Point(1, 449);
+            this.bTriche.Name = "bTriche";
+            this.bTriche.Size = new System.Drawing.Size(189, 31);
+            this.bTriche.TabIndex = 17;
+            this.bTriche.Text = "Cheat";
+            this.bTriche.UseVisualStyleBackColor = false;
+            this.bTriche.Click += new System.EventHandler(this.bTriche_Click);
+            // 
             // bSauvegarder
             // 
             this.bSauvegarder.BackColor = System.Drawing.Color.Chocolate;
@@ -100,7 +113,7 @@ namespace Snake_Ladder_Game
             this.bSauvegarder.Name = "bSauvegarder";
             this.bSauvegarder.Size = new System.Drawing.Size(93, 35);
             this.bSauvegarder.TabIndex = 16;
-            this.bSauvegarder.Text = "Sauvegarder";
+            this.bSauvegarder.Text = "Save";
             this.bSauvegarder.UseVisualStyleBackColor = false;
             this.bSauvegarder.Click += new System.EventHandler(this.bSauvegarder_Click);
             // 
@@ -113,7 +126,7 @@ namespace Snake_Ladder_Game
             this.bCharger.Name = "bCharger";
             this.bCharger.Size = new System.Drawing.Size(93, 35);
             this.bCharger.TabIndex = 15;
-            this.bCharger.Text = "Charger";
+            this.bCharger.Text = "Load";
             this.bCharger.UseVisualStyleBackColor = false;
             this.bCharger.Click += new System.EventHandler(this.bCharger_Click);
             // 
@@ -126,7 +139,7 @@ namespace Snake_Ladder_Game
             this.lJoueur.Name = "lJoueur";
             this.lJoueur.Size = new System.Drawing.Size(185, 35);
             this.lJoueur.TabIndex = 14;
-            this.lJoueur.Text = "Joueur Vert";
+            this.lJoueur.Text = "Green Pawn";
             this.lJoueur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lValeurPosition2
@@ -138,7 +151,7 @@ namespace Snake_Ladder_Game
             this.lValeurPosition2.Name = "lValeurPosition2";
             this.lValeurPosition2.Size = new System.Drawing.Size(185, 35);
             this.lValeurPosition2.TabIndex = 13;
-            this.lValeurPosition2.Text = "Position Joueur 2 :";
+            this.lValeurPosition2.Text = "Red position : ";
             this.lValeurPosition2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lPosition2
@@ -160,7 +173,7 @@ namespace Snake_Ladder_Game
             this.bRoll2.Name = "bRoll2";
             this.bRoll2.Size = new System.Drawing.Size(93, 35);
             this.bRoll2.TabIndex = 11;
-            this.bRoll2.Text = "Lancer !";
+            this.bRoll2.Text = "Roll !";
             this.bRoll2.UseVisualStyleBackColor = false;
             this.bRoll2.Click += new System.EventHandler(this.bRoll2_Click);
             // 
@@ -173,7 +186,7 @@ namespace Snake_Ladder_Game
             this.lValeurPosition.Name = "lValeurPosition";
             this.lValeurPosition.Size = new System.Drawing.Size(185, 35);
             this.lValeurPosition.TabIndex = 10;
-            this.lValeurPosition.Text = "Position Joueur 1 :";
+            this.lValeurPosition.Text = "Green position :";
             this.lValeurPosition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lPosition
@@ -195,7 +208,7 @@ namespace Snake_Ladder_Game
             this.bRoll.Name = "bRoll";
             this.bRoll.Size = new System.Drawing.Size(93, 35);
             this.bRoll.TabIndex = 8;
-            this.bRoll.Text = "Lancer !";
+            this.bRoll.Text = "Roll !";
             this.bRoll.UseVisualStyleBackColor = false;
             this.bRoll.Click += new System.EventHandler(this.bRoll_Click);
             // 
@@ -226,7 +239,7 @@ namespace Snake_Ladder_Game
             this.lValueDice.Name = "lValueDice";
             this.lValueDice.Size = new System.Drawing.Size(185, 35);
             this.lValueDice.TabIndex = 5;
-            this.lValueDice.Text = "Valeur dé ";
+            this.lValueDice.Text = "Dice value";
             this.lValueDice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lY
@@ -328,19 +341,6 @@ namespace Snake_Ladder_Game
             this.pbPawn1B.Size = new System.Drawing.Size(50, 50);
             this.pbPawn1B.TabIndex = 3;
             this.pbPawn1B.TabStop = false;
-            // 
-            // bTriche
-            // 
-            this.bTriche.BackColor = System.Drawing.Color.Black;
-            this.bTriche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bTriche.ForeColor = System.Drawing.Color.White;
-            this.bTriche.Location = new System.Drawing.Point(1, 449);
-            this.bTriche.Name = "bTriche";
-            this.bTriche.Size = new System.Drawing.Size(189, 31);
-            this.bTriche.TabIndex = 17;
-            this.bTriche.Text = "Triche";
-            this.bTriche.UseVisualStyleBackColor = false;
-            this.bTriche.Click += new System.EventHandler(this.bTriche_Click);
             // 
             // bRestart
             // 
